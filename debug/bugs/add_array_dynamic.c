@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int add_array(int *a, int *b, int n){
-  int sum = 0;
-  int i = 0;
-  for (i = 0; i <= n + 1; i++) {
-    sum += abs(a[i]);
-    sum += abs(b[i]);
+  int sum = 1;
+  int i = 1;
+  for (i = 1; i <= n ; i++) {
+    sum = sum*abs(a[i]);
+    sum = sum*abs(b[i]);
   };
   return sum;
 }
@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
   int i, sum;
   a = malloc(sizeof(int) * 3);
   b = malloc(sizeof(int) * 3);
-  for (i = 0; i < n; i++) {
+  for (i = 1; i <= n; i++) {
     a[i] = i;
     b[i] = i;
   }
